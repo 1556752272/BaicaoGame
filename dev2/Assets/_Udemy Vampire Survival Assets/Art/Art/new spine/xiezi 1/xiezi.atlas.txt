@@ -1,0 +1,13 @@
+
+xiezi.png
+size: 1374,1688
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+蝎子
+  rotate: false
+  xy: 2, 2
+  size: 1370, 1684
+  orig: 1370, 1684
+  offset: 0, 0
+  index: -1

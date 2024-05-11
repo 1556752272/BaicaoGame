@@ -1,0 +1,204 @@
+{ "skeleton": { "images": "L:/项目/booom/spine文件/主角spine文件_比例确定版/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "shadow", "bone": "root", "attachment": "shadow" },
+	{ "name": "back_hair", "bone": "root", "attachment": "back_hair" },
+	{ "name": "plants", "bone": "root", "attachment": "plants" },
+	{ "name": "calf_L", "bone": "root", "attachment": "calf_L" },
+	{ "name": "thigh_L", "bone": "root", "attachment": "thigh_L" },
+	{ "name": "calf_R", "bone": "root", "attachment": "calf_R" },
+	{ "name": "thigh_R", "bone": "root", "attachment": "thigh_R" },
+	{ "name": "foot_L", "bone": "root", "attachment": "foot_L" },
+	{ "name": "foot_R", "bone": "root", "attachment": "foot_R" },
+	{ "name": "hat", "bone": "root", "attachment": "hat" },
+	{ "name": "hand_L", "bone": "root", "attachment": "hand_L" },
+	{ "name": "forearm_L", "bone": "root", "attachment": "forearm_L" },
+	{ "name": "arm_pendant_L", "bone": "root", "attachment": "arm_pendant_L" },
+	{ "name": "L_upper_arm", "bone": "root", "attachment": "L_upper_arm" },
+	{ "name": "Backpack_2", "bone": "root", "attachment": "Backpack_2" },
+	{ "name": "Backpack", "bone": "root", "attachment": "Backpack" },
+	{ "name": "packet", "bone": "root", "attachment": "packet" },
+	{ "name": "lower_body", "bone": "root", "attachment": "lower_body" },
+	{ "name": "upper_body", "bone": "root", "attachment": "upper_body" },
+	{ "name": "necklace", "bone": "root", "attachment": "necklace" },
+	{ "name": "neck", "bone": "root", "attachment": "neck" },
+	{ "name": "hand_R", "bone": "root", "attachment": "hand_R" },
+	{ "name": "forearm_R", "bone": "root", "attachment": "forearm_R" },
+	{ "name": "arm_pendant_R", "bone": "root", "attachment": "arm_pendant_R" },
+	{ "name": "R_upper_arm", "bone": "root", "attachment": "R_upper_arm" },
+	{ "name": "L_shoulder_strap", "bone": "root", "attachment": "L_shoulder_strap" },
+	{ "name": "R_shoulder_strap", "bone": "root", "attachment": "R_shoulder_strap" },
+	{ "name": "pocket", "bone": "root", "attachment": "pocket" },
+	{ "name": "tape", "bone": "root", "attachment": "tape" },
+	{ "name": "pendant_5_back", "bone": "root", "attachment": "pendant_5_back" },
+	{ "name": "pendant_4_L", "bone": "root", "attachment": "pendant_4_L" },
+	{ "name": "pendant_3_R", "bone": "root", "attachment": "pendant_3_R" },
+	{ "name": "pendant_2", "bone": "root", "attachment": "pendant_2" },
+	{ "name": "pendant_1", "bone": "root", "attachment": "pendant_1" },
+	{ "name": "face", "bone": "root", "attachment": "face" },
+	{ "name": "whites_of_eyes", "bone": "root", "attachment": "whites_of_eyes" },
+	{ "name": "eyes", "bone": "root", "attachment": "eyes" },
+	{ "name": "Close_eyes", "bone": "root", "attachment": "Close_eyes" },
+	{ "name": "top_hair", "bone": "root", "attachment": "top_hair" },
+	{ "name": "right_back_hair_3", "bone": "root", "attachment": "right_back_hair_3" },
+	{ "name": "right_back_hair_2", "bone": "root", "attachment": "right_back_hair_2" },
+	{ "name": "right_back_hair_1", "bone": "root", "attachment": "right_back_hair_1" },
+	{ "name": "Lhair", "bone": "root", "attachment": "Lhair" },
+	{ "name": "front_hair", "bone": "root", "attachment": "front_hair" },
+	{ "name": "ear", "bone": "root", "attachment": "ear" },
+	{ "name": "earrings", "bone": "root", "attachment": "earrings" },
+	{ "name": "Rhair", "bone": "root", "attachment": "Rhair" },
+	{ "name": "Eyebrow", "bone": "root", "attachment": "Eyebrow" }
+],
+"skins": {
+	"default": {
+		"shadow": {
+			"shadow": { "x": 117.5, "y": -316, "width": 149, "height": 74 }
+		},
+		"back_hair": {
+			"back_hair": { "x": 115.5, "y": -111.5, "width": 113, "height": 129 }
+		},
+		"plants": {
+			"plants": { "x": 48.5, "y": -169, "width": 47, "height": 46 }
+		},
+		"calf_L": {
+			"calf_L": { "x": 147.5, "y": -268, "width": 35, "height": 76 }
+		},
+		"thigh_L": {
+			"thigh_L": { "x": 140, "y": -229.5, "width": 30, "height": 51 }
+		},
+		"calf_R": {
+			"calf_R": { "x": 92.5, "y": -267.5, "width": 49, "height": 73 }
+		},
+		"thigh_R": {
+			"thigh_R": { "x": 106, "y": -230, "width": 30, "height": 52 }
+		},
+		"foot_L": {
+			"foot_L": { "x": 154.5, "y": -307, "width": 59, "height": 34 }
+		},
+		"foot_R": {
+			"foot_R": { "x": 86, "y": -305.5, "width": 58, "height": 37 }
+		},
+		"hat": {
+			"hat": { "x": 106.5, "y": -145, "width": 47, "height": 24 }
+		},
+		"hand_L": {
+			"hand_L": { "x": 163, "y": -210.5, "width": 26, "height": 21 }
+		},
+		"forearm_L": {
+			"forearm_L": { "x": 159, "y": -192, "width": 34, "height": 42 }
+		},
+		"arm_pendant_L": {
+			"arm_pendant_L": { "x": 161, "y": -183.5, "width": 12, "height": 17 }
+		},
+		"L_upper_arm": {
+			"L_upper_arm": { "x": 149.5, "y": -165.5, "width": 37, "height": 47 }
+		},
+		"Backpack_2": {
+			"Backpack_2": { "x": 73.5, "y": -219.5, "width": 37, "height": 73 }
+		},
+		"Backpack": {
+			"Backpack": { "x": 76.5, "y": -172, "width": 67, "height": 54 }
+		},
+		"packet": {
+			"packet": { "x": 158.5, "y": -244, "width": 13, "height": 16 }
+		},
+		"lower_body": {
+			"lower_body": { "x": 119.5, "y": -212, "width": 97, "height": 82 }
+		},
+		"upper_body": {
+			"upper_body": { "x": 125, "y": -160, "width": 62, "height": 62 }
+		},
+		"necklace": {
+			"necklace": { "x": 122, "y": -161, "width": 38, "height": 48 }
+		},
+		"neck": {
+			"neck": { "x": 120, "y": -133, "width": 18, "height": 10 }
+		},
+		"hand_R": {
+			"hand_R": { "x": 78.5, "y": -211, "width": 33, "height": 24 }
+		},
+		"forearm_R": {
+			"forearm_R": { "x": 80, "y": -180.5, "width": 40, "height": 65 }
+		},
+		"arm_pendant_R": {
+			"arm_pendant_R": { "x": 82.5, "y": -182, "width": 15, "height": 20 }
+		},
+		"R_upper_arm": {
+			"R_upper_arm": { "x": 88.5, "y": -164.5, "width": 35, "height": 49 }
+		},
+		"L_shoulder_strap": {
+			"L_shoulder_strap": { "x": 144.5, "y": -186, "width": 21, "height": 92 }
+		},
+		"R_shoulder_strap": {
+			"R_shoulder_strap": { "x": 108.5, "y": -186.5, "width": 23, "height": 95 }
+		},
+		"pocket": {
+			"pocket": { "x": 125.5, "y": -223.5, "width": 61, "height": 49 }
+		},
+		"tape": {
+			"tape": { "x": 129, "y": -191.5, "width": 48, "height": 13 }
+		},
+		"pendant_5_back": {
+			"pendant_5_back": { "x": 51.5, "y": -199, "width": 11, "height": 40 }
+		},
+		"pendant_4_L": {
+			"pendant_4_L": { "x": 146, "y": -243.5, "width": 12, "height": 35 }
+		},
+		"pendant_3_R": {
+			"pendant_3_R": { "x": 118, "y": -243, "width": 16, "height": 36 }
+		},
+		"pendant_2": {
+			"pendant_2": { "x": 102.5, "y": -189, "width": 7, "height": 30 }
+		},
+		"pendant_1": {
+			"pendant_1": { "x": 71, "y": -253, "width": 10, "height": 26 }
+		},
+		"face": {
+			"face": { "x": 116, "y": -85, "width": 104, "height": 100 }
+		},
+		"whites_of_eyes": {
+			"whites_of_eyes": { "x": 133.5, "y": -103.5, "width": 61, "height": 21 }
+		},
+		"eyes": {
+			"eyes": { "x": 131.5, "y": -102, "width": 79, "height": 24 }
+		},
+		"Close_eyes": {
+			"Close_eyes": { "x": 131.5, "y": -104.5, "width": 79, "height": 13 }
+		},
+		"top_hair": {
+			"top_hair": { "x": 112.5, "y": -52.5, "width": 135, "height": 73 }
+		},
+		"right_back_hair_3": {
+			"right_back_hair_3": { "x": 63.5, "y": -101.5, "width": 63, "height": 125 }
+		},
+		"right_back_hair_2": {
+			"right_back_hair_2": { "x": 81, "y": -98.5, "width": 60, "height": 153 }
+		},
+		"right_back_hair_1": {
+			"right_back_hair_1": { "x": 83, "y": -79, "width": 56, "height": 110 }
+		},
+		"Lhair": {
+			"Lhair": { "x": 163.5, "y": -92, "width": 39, "height": 124 }
+		},
+		"front_hair": {
+			"front_hair": { "x": 131.5, "y": -62.5, "width": 81, "height": 61 }
+		},
+		"ear": {
+			"ear": { "x": 83, "y": -103.5, "width": 28, "height": 31 }
+		},
+		"earrings": {
+			"earrings": { "x": 89, "y": -121.5, "width": 12, "height": 23 }
+		},
+		"Rhair": {
+			"Rhair": { "x": 100, "y": -91, "width": 44, "height": 128 }
+		},
+		"Eyebrow": {
+			"Eyebrow": { "x": 135, "y": -89, "width": 66, "height": 10 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

@@ -1,0 +1,27 @@
+
+人鱼技能2：召唤宝宝_新.png
+size: 543,257
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 2, 2
+  size: 387, 253
+  orig: 387, 253
+  offset: 0, 0
+  index: -1
+ear1
+  rotate: false
+  xy: 493, 68
+  size: 48, 187
+  orig: 48, 187
+  offset: 0, 0
+  index: -1
+ear2
+  rotate: false
+  xy: 391, 61
+  size: 100, 194
+  orig: 100, 194
+  offset: 0, 0
+  index: -1

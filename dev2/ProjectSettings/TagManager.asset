@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - bubble
+  - boy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Coin
+  - Water
+  - UI
+  - Enemy
+  - Exp
+  - Player
+  - EnemyBullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 4119857607
+    locked: 0
+  - name: liquid
+    uniqueID: 2239638947
+    locked: 0
+  - name: Coin
+    uniqueID: 2472445195
+    locked: 0
+  - name: Enemy
+    uniqueID: 3198667549
+    locked: 0
+  - name: Picks
+    uniqueID: 1938871265
+    locked: 0
+  - name: Weapon
+    uniqueID: 3298239375
+    locked: 0
+  - name: Rabbit
+    uniqueID: 1312448741
+    locked: 0
+  - name: Player
+    uniqueID: 266632281
+    locked: 0
+  - name: UI
+    uniqueID: 512284873
+    locked: 0
+  - name: pic
+    uniqueID: 1801327313
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0

@@ -1,0 +1,181 @@
+
+spider_monster.png
+size: 1049,559
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: false
+  xy: 2, 273
+  size: 314, 182
+  orig: 314, 182
+  offset: 0, 0
+  index: -1
+body_2
+  rotate: false
+  xy: 484, 347
+  size: 294, 99
+  orig: 296, 101
+  offset: 1, 1
+  index: -1
+body_3
+  rotate: false
+  xy: 493, 448
+  size: 299, 109
+  orig: 299, 109
+  offset: 0, 0
+  index: -1
+head
+  rotate: true
+  xy: 840, 55
+  size: 77, 93
+  orig: 77, 93
+  offset: 0, 0
+  index: -1
+leaf_1
+  rotate: false
+  xy: 705, 128
+  size: 125, 99
+  orig: 125, 99
+  offset: 0, 0
+  index: -1
+leaf_2
+  rotate: true
+  xy: 780, 229
+  size: 129, 195
+  orig: 129, 195
+  offset: 0, 0
+  index: -1
+leaf_3
+  rotate: false
+  xy: 724, 44
+  size: 114, 82
+  orig: 114, 96
+  offset: 0, 0
+  index: -1
+leaf_4
+  rotate: false
+  xy: 2, 96
+  size: 245, 175
+  orig: 245, 175
+  offset: 0, 0
+  index: -1
+leaf_5
+  rotate: true
+  xy: 109, 9
+  size: 85, 179
+  orig: 85, 179
+  offset: 0, 0
+  index: -1
+leaf_6
+  rotate: true
+  xy: 832, 134
+  size: 93, 104
+  orig: 93, 104
+  offset: 0, 0
+  index: -1
+leaf_7
+  rotate: false
+  xy: 2, 2
+  size: 105, 92
+  orig: 105, 92
+  offset: 0, 0
+  index: -1
+leg_1
+  rotate: true
+  xy: 794, 458
+  size: 99, 233
+  orig: 99, 233
+  offset: 0, 0
+  index: -1
+leg_1_2
+  rotate: false
+  xy: 703, 254
+  size: 59, 91
+  orig: 99, 233
+  offset: 0, 128
+  index: -1
+leg_2
+  rotate: true
+  xy: 484, 118
+  size: 109, 219
+  orig: 109, 219
+  offset: 0, 0
+  index: -1
+leg_2_2
+  rotate: false
+  xy: 935, 46
+  size: 60, 80
+  orig: 109, 219
+  offset: 0, 109
+  index: -1
+leg_3
+  rotate: false
+  xy: 318, 224
+  size: 164, 231
+  orig: 164, 231
+  offset: 0, 0
+  index: -1
+leg_3_2
+  rotate: false
+  xy: 989, 143
+  size: 58, 87
+  orig: 164, 231
+  offset: 0, 128
+  index: -1
+leg_4
+  rotate: true
+  xy: 794, 360
+  size: 96, 226
+  orig: 96, 226
+  offset: 0, 0
+  index: -1
+leg_4_2
+  rotate: false
+  xy: 938, 128
+  size: 49, 99
+  orig: 96, 226
+  offset: 47, 107
+  index: -1
+leg_5
+  rotate: true
+  xy: 290, 9
+  size: 95, 215
+  orig: 95, 215
+  offset: 0, 0
+  index: -1
+leg_5_2
+  rotate: true
+  xy: 507, 21
+  size: 95, 215
+  orig: 95, 215
+  offset: 0, 0
+  index: -1
+leg_6
+  rotate: true
+  xy: 249, 106
+  size: 116, 217
+  orig: 116, 217
+  offset: 0, 0
+  index: -1
+leg_6_2
+  rotate: true
+  xy: 484, 229
+  size: 116, 217
+  orig: 116, 217
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 457
+  size: 489, 100
+  orig: 491, 102
+  offset: 1, 1
+  index: -1
+zidan
+  rotate: true
+  xy: 977, 232
+  size: 126, 64
+  orig: 151, 73
+  offset: 7, 5
+  index: -1

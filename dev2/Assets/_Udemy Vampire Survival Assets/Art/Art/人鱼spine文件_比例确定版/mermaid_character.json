@@ -1,0 +1,164 @@
+{ "skeleton": { "images": "L:/项目/booom/spine文件/人鱼spine文件_比例确定版/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "shadow", "bone": "root", "attachment": "shadow" },
+	{ "name": "back_hair", "bone": "root", "attachment": "back_hair" },
+	{ "name": "Tail", "bone": "root", "attachment": "Tail" },
+	{ "name": "left_back_hair_3", "bone": "root", "attachment": "left_back_hair_3" },
+	{ "name": "neck", "bone": "root", "attachment": "neck" },
+	{ "name": "right_back_hair_3", "bone": "root", "attachment": "right_back_hair_3" },
+	{ "name": "ear_L", "bone": "root", "attachment": "ear_L" },
+	{ "name": "foot_L", "bone": "root", "attachment": "foot_L" },
+	{ "name": "calf_L", "bone": "root", "attachment": "calf_L" },
+	{ "name": "thigh_L", "bone": "root", "attachment": "thigh_L" },
+	{ "name": "foot_R", "bone": "root", "attachment": "foot_R" },
+	{ "name": "calf_R", "bone": "root", "attachment": "calf_R" },
+	{ "name": "thigh_R", "bone": "root", "attachment": "thigh_R" },
+	{ "name": "hand_L", "bone": "root", "attachment": "hand_L" },
+	{ "name": "forearm_L", "bone": "root", "attachment": "forearm_L" },
+	{ "name": "L_upper_arm", "bone": "root", "attachment": "L_upper_arm" },
+	{ "name": "lower_body", "bone": "root", "attachment": "lower_body" },
+	{ "name": "kit", "bone": "root", "attachment": "kit" },
+	{ "name": "L_clothes", "bone": "root", "attachment": "L_clothes" },
+	{ "name": "upper_body", "bone": "root", "attachment": "upper_body" },
+	{ "name": "belt", "bone": "root", "attachment": "belt" },
+	{ "name": "tie", "bone": "root", "attachment": "tie" },
+	{ "name": "plants", "bone": "root", "attachment": "plants" },
+	{ "name": "kit_2", "bone": "root", "attachment": "kit_2" },
+	{ "name": "face", "bone": "root", "attachment": "face" },
+	{ "name": "top_hair", "bone": "root", "attachment": "top_hair" },
+	{ "name": "eyes", "bone": "root", "attachment": "eyes" },
+	{ "name": "Close_eyes", "bone": "root", "attachment": "Close_eyes" },
+	{ "name": "Eyebrow", "bone": "root", "attachment": "Eyebrow" },
+	{ "name": "right_back_hair_2", "bone": "root", "attachment": "right_back_hair_2" },
+	{ "name": "right_back_hair_1", "bone": "root", "attachment": "right_back_hair_1" },
+	{ "name": "ear_R", "bone": "root", "attachment": "ear_R" },
+	{ "name": "hand_R", "bone": "root", "attachment": "hand_R" },
+	{ "name": "R_upper_arm", "bone": "root", "attachment": "R_upper_arm" },
+	{ "name": "forearm_R", "bone": "root", "attachment": "forearm_R" },
+	{ "name": "R_clothes", "bone": "root", "attachment": "R_clothes" },
+	{ "name": "R_hair", "bone": "root", "attachment": "R_hair" },
+	{ "name": "L_hair", "bone": "root", "attachment": "L_hair" }
+],
+"skins": {
+	"default": {
+		"shadow": {
+			"shadow": { "x": 177.5, "y": -346.5, "width": 149, "height": 75 }
+		},
+		"back_hair": {
+			"back_hair": { "x": 142, "y": -142.5, "width": 240, "height": 185 }
+		},
+		"Tail": {
+			"Tail": { "x": 121.5, "y": -268.5, "width": 153, "height": 131 }
+		},
+		"left_back_hair_3": {
+			"left_back_hair_3": { "x": 214.5, "y": -138, "width": 81, "height": 198 }
+		},
+		"neck": {
+			"neck": { "x": 178, "y": -153.5, "width": 18, "height": 15 }
+		},
+		"right_back_hair_3": {
+			"right_back_hair_3": { "x": 130.5, "y": -169.5, "width": 45, "height": 141 }
+		},
+		"ear_L": {
+			"ear_L": { "x": 236, "y": -120, "width": 40, "height": 46 }
+		},
+		"foot_L": {
+			"foot_L": { "x": 216, "y": -333, "width": 52, "height": 44 }
+		},
+		"calf_L": {
+			"calf_L": { "x": 210, "y": -292.5, "width": 38, "height": 85 }
+		},
+		"thigh_L": {
+			"thigh_L": { "x": 201.5, "y": -241.5, "width": 31, "height": 59 }
+		},
+		"foot_R": {
+			"foot_R": { "x": 141, "y": -332.5, "width": 52, "height": 45 }
+		},
+		"calf_R": {
+			"calf_R": { "x": 148, "y": -291.5, "width": 50, "height": 87 }
+		},
+		"thigh_R": {
+			"thigh_R": { "x": 163, "y": -240.5, "width": 32, "height": 61 }
+		},
+		"hand_L": {
+			"hand_L": { "x": 224, "y": -234, "width": 30, "height": 30 }
+		},
+		"forearm_L": {
+			"forearm_L": { "x": 212.5, "y": -214, "width": 35, "height": 50 }
+		},
+		"L_upper_arm": {
+			"L_upper_arm": { "x": 200, "y": -183.5, "width": 22, "height": 41 }
+		},
+		"lower_body": {
+			"lower_body": { "x": 183.5, "y": -222, "width": 65, "height": 58 }
+		},
+		"kit": {
+			"kit": { "x": 176.5, "y": -210, "width": 11, "height": 16 }
+		},
+		"L_clothes": {
+			"L_clothes": { "x": 199, "y": -190, "width": 24, "height": 70 }
+		},
+		"upper_body": {
+			"upper_body": { "x": 181.5, "y": -174, "width": 45, "height": 46 }
+		},
+		"belt": {
+			"belt": { "x": 182, "y": -196, "width": 36, "height": 14 }
+		},
+		"tie": {
+			"tie": { "x": 186.5, "y": -171.5, "width": 19, "height": 23 }
+		},
+		"plants": {
+			"plants": { "x": 176.5, "y": -199, "width": 17, "height": 58 }
+		},
+		"kit_2": {
+			"kit_2": { "x": 179.5, "y": -195.5, "width": 11, "height": 7 }
+		},
+		"face": {
+			"face": { "x": 172, "y": -101, "width": 98, "height": 106 }
+		},
+		"top_hair": {
+			"top_hair": { "x": 169, "y": -72.5, "width": 118, "height": 71 }
+		},
+		"eyes": {
+			"eyes": { "x": 187, "y": -121, "width": 76, "height": 26 }
+		},
+		"Close_eyes": {
+			"Close_eyes": { "x": 187, "y": -121.5, "width": 76, "height": 11 }
+		},
+		"Eyebrow": {
+			"Eyebrow": { "x": 187, "y": -104, "width": 70, "height": 8 }
+		},
+		"right_back_hair_2": {
+			"right_back_hair_2": { "x": 92.5000000000001, "y": -143, "width": 81, "height": 176 }
+		},
+		"right_back_hair_1": {
+			"right_back_hair_1": { "x": 109, "y": -134, "width": 116, "height": 180 }
+		},
+		"ear_R": {
+			"ear_R": { "x": 125.5, "y": -119, "width": 51, "height": 46 }
+		},
+		"hand_R": {
+			"hand_R": { "x": 113, "y": -153.5, "width": 46, "height": 51 }
+		},
+		"R_upper_arm": {
+			"R_upper_arm": { "x": 156.5, "y": -184.5, "width": 31, "height": 51 }
+		},
+		"forearm_R": {
+			"forearm_R": { "x": 136, "y": -188, "width": 38, "height": 46 }
+		},
+		"R_clothes": {
+			"R_clothes": { "x": 162.5, "y": -188, "width": 21, "height": 74 }
+		},
+		"R_hair": {
+			"R_hair": { "x": 160, "y": -108.5, "width": 68, "height": 107 }
+		},
+		"L_hair": {
+			"L_hair": { "x": 221, "y": -107.5, "width": 56, "height": 103 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

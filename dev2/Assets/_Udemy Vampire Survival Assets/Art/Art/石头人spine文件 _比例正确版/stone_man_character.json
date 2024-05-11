@@ -1,0 +1,120 @@
+{ "skeleton": { "images": "L:/项目/booom/spine文件/石头人spine文件 _比例正确版/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "shadow", "bone": "root", "attachment": "shadow" },
+	{ "name": "forearm_L", "bone": "root", "attachment": "forearm_L" },
+	{ "name": "hand_L", "bone": "root", "attachment": "hand_L" },
+	{ "name": "L_upper_arm", "bone": "root", "attachment": "L_upper_arm" },
+	{ "name": "foot_L", "bone": "root", "attachment": "foot_L" },
+	{ "name": "calf_L", "bone": "root", "attachment": "calf_L" },
+	{ "name": "thigh_L", "bone": "root", "attachment": "thigh_L" },
+	{ "name": "foot_R", "bone": "root", "attachment": "foot_R" },
+	{ "name": "calf_R", "bone": "root", "attachment": "calf_R" },
+	{ "name": "thigh_R", "bone": "root", "attachment": "thigh_R" },
+	{ "name": "lower_body", "bone": "root", "attachment": "lower_body" },
+	{ "name": "upper_body", "bone": "root", "attachment": "upper_body" },
+	{ "name": "L_shoulder_strap", "bone": "root", "attachment": "L_shoulder_strap" },
+	{ "name": "R_shoulder_strap", "bone": "root", "attachment": "R_shoulder_strap" },
+	{ "name": "tie", "bone": "root", "attachment": "tie" },
+	{ "name": "face", "bone": "root", "attachment": "face" },
+	{ "name": "whites_of_eyes", "bone": "root", "attachment": "whites_of_eyes" },
+	{ "name": "eyes", "bone": "root", "attachment": "eyes" },
+	{ "name": "Close_eyes", "bone": "root", "attachment": "Close_eyes" },
+	{ "name": "belt", "bone": "root", "attachment": "belt" },
+	{ "name": "plants", "bone": "root", "attachment": "plants" },
+	{ "name": "button", "bone": "root", "attachment": "button" },
+	{ "name": "Eyebrow", "bone": "root", "attachment": "Eyebrow" },
+	{ "name": "forearm_R", "bone": "root", "attachment": "forearm_R" },
+	{ "name": "hand_R", "bone": "root", "attachment": "hand_R" },
+	{ "name": "R_upper_arm", "bone": "root", "attachment": "R_upper_arm" },
+	{ "name": "packet", "bone": "root", "attachment": "packet" }
+],
+"skins": {
+	"default": {
+		"shadow": {
+			"shadow": { "x": 115.5, "y": -345.5, "width": 149, "height": 75 }
+		},
+		"forearm_L": {
+			"forearm_L": { "x": 174.5, "y": -218, "width": 45, "height": 76 }
+		},
+		"hand_L": {
+			"hand_L": { "x": 170, "y": -258, "width": 42, "height": 38 }
+		},
+		"L_upper_arm": {
+			"L_upper_arm": { "x": 174, "y": -181, "width": 46, "height": 70 }
+		},
+		"foot_L": {
+			"foot_L": { "x": 150, "y": -324, "width": 62, "height": 56 }
+		},
+		"calf_L": {
+			"calf_L": { "x": 143.5, "y": -280, "width": 47, "height": 76 }
+		},
+		"thigh_L": {
+			"thigh_L": { "x": 144.5, "y": -234, "width": 37, "height": 74 }
+		},
+		"foot_R": {
+			"foot_R": { "x": 86.5, "y": -322.5, "width": 63, "height": 59 }
+		},
+		"calf_R": {
+			"calf_R": { "x": 92, "y": -279.5, "width": 58, "height": 79 }
+		},
+		"thigh_R": {
+			"thigh_R": { "x": 107.5, "y": -234.5, "width": 45, "height": 69 }
+		},
+		"lower_body": {
+			"lower_body": { "x": 123.5, "y": -198.5, "width": 81, "height": 39 }
+		},
+		"upper_body": {
+			"upper_body": { "x": 117.5, "y": -169, "width": 129, "height": 70 }
+		},
+		"L_shoulder_strap": {
+			"L_shoulder_strap": { "x": 155.5, "y": -175, "width": 21, "height": 74 }
+		},
+		"R_shoulder_strap": {
+			"R_shoulder_strap": { "x": 95, "y": -174.5, "width": 40, "height": 79 }
+		},
+		"tie": {
+			"tie": { "x": 134, "y": -177.5, "width": 28, "height": 57 }
+		},
+		"face": {
+			"face": { "x": 115, "y": -86.5, "width": 124, "height": 131 }
+		},
+		"whites_of_eyes": {
+			"whites_of_eyes": { "x": 133, "y": -105, "width": 70, "height": 20 }
+		},
+		"eyes": {
+			"eyes": { "x": 134, "y": -106, "width": 66, "height": 16 }
+		},
+		"Close_eyes": {
+			"Close_eyes": { "x": 132.5, "y": -108.5, "width": 69, "height": 11 }
+		},
+		"belt": {
+			"belt": { "x": 126.5, "y": -213.5, "width": 69, "height": 17 }
+		},
+		"plants": {
+			"plants": { "x": 105.5, "y": -198, "width": 35, "height": 60 }
+		},
+		"button": {
+			"button": { "x": 115, "y": -213, "width": 14, "height": 10 }
+		},
+		"Eyebrow": {
+			"Eyebrow": { "x": 133, "y": -97, "width": 78, "height": 24 }
+		},
+		"forearm_R": {
+			"forearm_R": { "x": 79, "y": -222.5, "width": 74, "height": 63 }
+		},
+		"hand_R": {
+			"hand_R": { "x": 113.5, "y": -231, "width": 47, "height": 44 }
+		},
+		"R_upper_arm": {
+			"R_upper_arm": { "x": 60.5, "y": -192, "width": 59, "height": 98 }
+		},
+		"packet": {
+			"packet": { "x": 62.5, "y": -178.5, "width": 57, "height": 49 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}

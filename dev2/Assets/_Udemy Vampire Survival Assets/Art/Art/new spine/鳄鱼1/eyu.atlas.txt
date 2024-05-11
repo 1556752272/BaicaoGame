@@ -1,0 +1,13 @@
+
+eyu.png
+size: 585,370
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+怪物1(2)
+  rotate: false
+  xy: 2, 2
+  size: 581, 366
+  orig: 581, 366
+  offset: 0, 0
+  index: -1

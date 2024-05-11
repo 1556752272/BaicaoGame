@@ -1,0 +1,202 @@
+
+stone_man_character.png
+size: 411,269
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Close_eyes
+  rotate: false
+  xy: 267, 2
+  size: 67, 9
+  orig: 69, 11
+  offset: 1, 1
+  index: -1
+Eyebrow
+  rotate: false
+  xy: 189, 6
+  size: 76, 22
+  orig: 78, 24
+  offset: 1, 1
+  index: -1
+L_shoulder_strap
+  rotate: false
+  xy: 360, 13
+  size: 21, 74
+  orig: 21, 74
+  offset: 0, 0
+  index: -1
+L_upper_arm
+  rotate: false
+  xy: 312, 16
+  size: 46, 70
+  orig: 46, 70
+  offset: 0, 0
+  index: -1
+R_shoulder_strap
+  rotate: false
+  xy: 332, 127
+  size: 40, 79
+  orig: 40, 79
+  offset: 0, 0
+  index: -1
+R_upper_arm
+  rotate: true
+  xy: 277, 208
+  size: 59, 98
+  orig: 59, 98
+  offset: 0, 0
+  index: -1
+belt
+  rotate: true
+  xy: 170, 2
+  size: 69, 17
+  orig: 69, 17
+  offset: 0, 0
+  index: -1
+button
+  rotate: true
+  xy: 336, 2
+  size: 12, 8
+  orig: 14, 10
+  offset: 1, 1
+  index: -1
+calf_L
+  rotate: false
+  xy: 74, 58
+  size: 47, 76
+  orig: 47, 76
+  offset: 0, 0
+  index: -1
+calf_R
+  rotate: true
+  xy: 128, 134
+  size: 58, 79
+  orig: 58, 79
+  offset: 0, 0
+  index: -1
+eyes
+  rotate: false
+  xy: 383, 56
+  size: 26, 16
+  orig: 66, 16
+  offset: 0, 0
+  index: -1
+eyes_2
+  rotate: false
+  xy: 383, 38
+  size: 21, 16
+  orig: 66, 16
+  offset: 45, 0
+  index: -1
+face
+  rotate: false
+  xy: 2, 136
+  size: 124, 131
+  orig: 124, 131
+  offset: 0, 0
+  index: -1
+foot_L
+  rotate: false
+  xy: 189, 30
+  size: 62, 56
+  orig: 62, 56
+  offset: 0, 0
+  index: -1
+foot_R
+  rotate: false
+  xy: 123, 73
+  size: 63, 59
+  orig: 63, 59
+  offset: 0, 0
+  index: -1
+forearm_L
+  rotate: false
+  xy: 285, 130
+  size: 45, 76
+  orig: 45, 76
+  offset: 0, 0
+  index: -1
+forearm_R
+  rotate: false
+  xy: 209, 129
+  size: 74, 63
+  orig: 74, 63
+  offset: 0, 0
+  index: -1
+hand_L
+  rotate: false
+  xy: 347, 89
+  size: 40, 36
+  orig: 42, 38
+  offset: 1, 1
+  index: -1
+hand_R
+  rotate: false
+  xy: 74, 14
+  size: 45, 42
+  orig: 47, 44
+  offset: 1, 1
+  index: -1
+lower_body
+  rotate: false
+  xy: 188, 88
+  size: 81, 39
+  orig: 81, 39
+  offset: 0, 0
+  index: -1
+packet
+  rotate: false
+  xy: 253, 37
+  size: 57, 49
+  orig: 57, 49
+  offset: 0, 0
+  index: -1
+plants
+  rotate: false
+  xy: 374, 146
+  size: 35, 60
+  orig: 35, 60
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 128, 194
+  size: 147, 73
+  orig: 149, 75
+  offset: 1, 1
+  index: -1
+thigh_L
+  rotate: true
+  xy: 271, 88
+  size: 37, 74
+  orig: 37, 74
+  offset: 0, 0
+  index: -1
+thigh_R
+  rotate: false
+  xy: 123, 2
+  size: 45, 69
+  orig: 45, 69
+  offset: 0, 0
+  index: -1
+tie
+  rotate: false
+  xy: 377, 210
+  size: 28, 57
+  orig: 28, 57
+  offset: 0, 0
+  index: -1
+upper_body
+  rotate: true
+  xy: 2, 5
+  size: 129, 70
+  orig: 129, 70
+  offset: 0, 0
+  index: -1
+whites_of_eyes
+  rotate: true
+  xy: 389, 74
+  size: 70, 20
+  orig: 70, 20
+  offset: 0, 0
+  index: -1
