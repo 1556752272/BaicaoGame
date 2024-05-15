@@ -53,8 +53,11 @@ public class ThrowPotion : Weapon
         {
             spawnCounter = timeBetweenSpawn;
 
-              
-             DetectEnemiesInRange();
+            if (weaponLevel == 0)
+            {
+                return;
+            }
+            DetectEnemiesInRange();
 
              ProcessNearestEnemies(weaponnumber);
             

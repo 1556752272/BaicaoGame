@@ -44,12 +44,17 @@ public class ExperienceLevelController : MonoBehaviour
 
         if (currentExperience >= expLevels[currentLevel])
         {
+            StartCoroutine(WaitForFiveSeconds());
             LevelUp();
         }
 
         UIController.instance.UpdateExperience(currentExperience, expLevels[currentLevel],currentLevel);
     }
-
+    IEnumerator WaitForFiveSeconds()
+        {
+            yield return new WaitForSeconds(0.8f);
+            
+        }
     public void SpawnExp(Vector3 position,int expValue)//æ≠—È÷µµÙ¬‰
     {
        Instantiate(pickup, position, Quaternion.identity,this.transform).expValue = expValue;

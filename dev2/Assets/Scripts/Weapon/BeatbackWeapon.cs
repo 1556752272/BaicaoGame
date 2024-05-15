@@ -35,7 +35,10 @@ public class BeatbackWeapon : Weapon
         if (attackCounter <= 0)
         {
             attackCounter = timeBetweenSpawn;
-
+            if (weaponLevel == 0)
+            {
+                return;
+            }
             direction = Input.GetAxisRaw("Horizontal");
             Vector3 enemyTran = PlayerController.instance.GetClosestEnemy();
             if (enemyTran == null) return;

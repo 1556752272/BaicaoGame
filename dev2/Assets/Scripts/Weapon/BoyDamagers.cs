@@ -63,8 +63,8 @@ public class BoyDamagers :EnemyDamagers
             this.transform.localScale = this.transform.localScale * 1.2f;//体积变为1.2倍
             if (BoyWeapon.instance.weaponLevel >= 6)
             {
-                PlayerHealthController.instance.maxHealth += 10;
-                PlayerHealthController.instance.addHealth(10);
+                PlayerHealthController.instance.AddHealth(10) ;
+                
             }
         }
         if (madTimer > 0)

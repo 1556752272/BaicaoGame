@@ -34,6 +34,9 @@ public class EnemyController : Enemy
 
     private bool isIgnited = false; // 是否被点燃  
     private Coroutine igniteCoroutine; // 点燃协程  
+    private float Hurttimer ;
+    private MeshRenderer meshRenderer;
+    private Color mineColor;
     void Start()
     {
         movespeed2 = moveSpeed;
@@ -41,10 +44,20 @@ public class EnemyController : Enemy
         //target = FindObjectOfType<PlayerController>().transform;
         target = PlayerHealthController.instance.transform;
         theRB = GetComponent<Rigidbody2D>();
+        meshRenderer = this.gameObject.GetComponent<MeshRenderer>();
+        mineColor = meshRenderer.material.color;
     }
 
     void Update()
     {
+        if (Hurttimer >= 0)
+        {
+            Hurttimer -= Time.deltaTime;
+            if (Hurttimer <= 0)
+            {
+                meshRenderer.material.color = mineColor;
+            }
+        }
         if ((PlayerController.instance.transform.position.x < transform.position.x) && faceRight)
         {
             Vector3 newScale = transform.localScale;
@@ -112,7 +125,33 @@ public class EnemyController : Enemy
         }
         
     }
+    bool isFading = false;
+    IEnumerator FadeOut()
+    {
+        isFading = true;
+        Color fadeColor = new Color(meshRenderer.material.color.r, meshRenderer.material.color.g, meshRenderer.material.color.b, 0); // 透明色  
+        float elapsedTime = 0;
 
+        while (elapsedTime < 1f && isFading)
+        {
+            // 使用Lerp在elapsedTime和fadeDuration之间插值  
+            meshRenderer.material.color = Color.Lerp(mineColor, fadeColor, elapsedTime / 1f);
+            elapsedTime += Time.deltaTime;
+            if (elapsedTime >= 1f)
+            {
+                Die();
+                ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
+                if (Random.value <= coinDropRate)//一半概率掉落金币
+                {
+                    CoinController.instance.DropCoin(transform.position, coinValue);
+                }
+                Destroy(this.gameObject);
+            }
+            yield return null; // 等待直到下一帧  
+        }
+
+
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && hitCounter < 0f)
@@ -132,21 +171,14 @@ public class EnemyController : Enemy
 
     public override void TakeDamage(float damageToTake)
     {
+        meshRenderer.material.color = Color.gray;
+
+        Hurttimer = 0.3f;
         health -= damageToTake;
         SFXManager.instance.PlaySFXPitched(2);
         if (health <= 0)
         {
-            //Destroy(gameObject);   
-
-            ExperienceLevelController.instance.SpawnExp(transform.position,expToGive);
-            Die();
-            Destroy(gameObject);
-
-            if(Random.value <= coinDropRate)//一半概率掉落金币
-            {
-                CoinController.instance.DropCoin(transform.position, coinValue);
-            }
-            
+            if (isFading == false) StartCoroutine(FadeOut());
         }else
         {
         }
@@ -162,8 +194,7 @@ public class EnemyController : Enemy
             //Destroy(gameObject);   
 
             ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
-            Die();
-            Destroy(gameObject);
+            if (isFading == false) StartCoroutine(FadeOut());
 
             if (Random.value <= coinDropRate)//一半概率掉落金币
             {
@@ -232,6 +263,7 @@ public class EnemyController : Enemy
     // 怪物死亡逻辑  
     private void Die()
     {
+        //DestroyMonster();
         if (isIgnited) { 
         isIgnited = false;
             if (igniteCoroutine != null)
@@ -252,6 +284,30 @@ public class EnemyController : Enemy
         }
         }
 
+    }
+    public void DestroyMonster()
+    {
+        // 开始渐变效果  
+        StartCoroutine(FadeOutAndDestroy());
+    }
+
+    IEnumerator FadeOutAndDestroy()
+    {
+        Color fadeOutColor = Color.black;//new Color(mineColor.r, mineColor.g, mineColor.b, 0f); // 透明颜色  
+        float fadeDuration = 1f; // 渐变持续时间  
+
+        // 使用Color.Lerp进行颜色渐变  
+        for (float t = 0f; t <= 1f; t += Time.deltaTime / fadeDuration)
+        {
+            Color color = Color.Lerp(mineColor, fadeOutColor, t);
+            meshRenderer.material.color = color;
+
+            // 等待下一帧  
+            yield return null;
+        }
+
+        // 渐变完成后销毁怪物  
+        Destroy(gameObject);
     }
 
 }  

@@ -37,7 +37,10 @@ public class PlayerBullet : Weapon
         if (attackCounter <= 0)
         {
             attackCounter = timeBetweenSpawn;
-
+            if (weaponLevel == 0)
+            {
+                return;
+            }
             //direction = Input.GetAxisRaw("Horizontal");
 
             //if (direction != 0)//这里就是设置一个生成的时候顺便附带方向

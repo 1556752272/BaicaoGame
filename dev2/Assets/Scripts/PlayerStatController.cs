@@ -92,7 +92,7 @@ public class PlayerStatController : MonoBehaviour
         CoinController.instance.SpendCoins(health[healthLevel].cost);
         UpdateDisplay();
 
-        PlayerHealthController.instance.maxHealth = health[healthLevel].value;
+        //PlayerHealthController.instance.maxHealth = health[healthLevel].value;
         PlayerHealthController.instance.currentHealth += health[healthLevel].value -health[healthLevel - 1].value;
     }
 

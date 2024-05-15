@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Weapon\BezierThrow.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\FoodPickup.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawnerChange.cs" />
     <Compile Include="Assets\_Udemy Vampire Survival Assets\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
     <Compile Include="Assets\Scripts\Weapon\Projectile.cs" />
     <Compile Include="Assets\Scripts\Weapon\BulletDamager.cs" />

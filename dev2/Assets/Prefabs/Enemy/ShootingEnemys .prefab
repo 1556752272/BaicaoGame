@@ -208,7 +208,6 @@ MonoBehaviour:
   isSlow: 0
   slowNumber: 0
   spineAnimation: {fileID: 6609354340923954011}
-  isWalking: 1
 --- !u!114 &6609354340923954015
 MonoBehaviour:
   m_ObjectHideFlags: 0

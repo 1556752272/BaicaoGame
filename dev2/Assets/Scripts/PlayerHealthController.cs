@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
+using TMPro;
 public class PlayerHealthController : MonoBehaviour
 {
     public static PlayerHealthController instance;
@@ -20,13 +21,14 @@ public class PlayerHealthController : MonoBehaviour
         instance = this;
     }
 
-    public float currentHealth, maxHealth;
-  
+    public float currentHealth;
+    private float maxHealth;
 
     public Slider healthSlider;
 
     public GameObject deathEffect;//这里将来放死亡特效
-
+    public TMP_Text leftText;
+    public TMP_Text rightText;
     void Start()
     {
         boy = null;
@@ -35,6 +37,8 @@ public class PlayerHealthController : MonoBehaviour
 
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
+        leftText.text = currentHealth.ToString();
+        rightText.text ="/  "+ maxHealth.ToString();
     }
 
     
@@ -52,15 +56,16 @@ public class PlayerHealthController : MonoBehaviour
         {
             SFXManager.instance.PlaySFXPitched(0);
             currentHealth -= damageToTake;
+            leftText.text = currentHealth.ToString();
             InvincibleCounter = InvincibleTimer;
-            Time.timeScale = 0.3f;
-            
+            //Time.timeScale = 0.3f;
+            // 可选：在一定延迟后恢复时间流速
+            //Invoke("ResetTimeScale", 0.3f); // 0.3秒后恢复
             if (boy != null)
             {
                 boy.powerup();
             }
-            // 可选：在一定延迟后恢复时间流速
-            Invoke("ResetTimeScale", 0.3f); // 0.3秒后恢复
+           
         }
         else
         {
@@ -89,6 +94,7 @@ public class PlayerHealthController : MonoBehaviour
     public void addHealth(int num)
     {
         currentHealth += num;
+        leftText.text = currentHealth.ToString();
         DamageNumberController.instance.SpawnDamage(num,PlayerController.instance.transform.position+new Vector3(0,2,0),true,true);
     }
     public void Die()
@@ -106,5 +112,12 @@ public class PlayerHealthController : MonoBehaviour
 
         // 暂停游戏  
         Time.timeScale = 0f;
+    }
+    public void AddHealth(int num)
+    {
+        maxHealth += num;
+        currentHealth += num;
+        leftText.text = currentHealth.ToString();
+        rightText.text = "/  " + maxHealth.ToString();
     }
 }

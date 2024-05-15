@@ -25,11 +25,6 @@ public class BoyWeapon : Weapon
     void Start()
     {
         SetStats();
-        
-
-
-        BoyDamagers b= Instantiate(damager, Spawnplace.position, damager.transform.rotation);
-        PlayerHealthController.instance.boy = b;
     }
 
     void Update()
@@ -44,6 +39,11 @@ public class BoyWeapon : Weapon
     }
         void SetStats()
         {
+        if (weaponLevel == 1)//设置一级的时候产生海兔
+        {
+            BoyDamagers b = Instantiate(damager, Spawnplace.position, damager.transform.rotation);
+            PlayerHealthController.instance.boy = b;
+        }
         if (weaponLevel == 6)
         {
             PlayerController.instance.assignWeapons.Remove(this);
