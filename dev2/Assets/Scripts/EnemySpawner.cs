@@ -31,10 +31,10 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         //spawnCounter = timeToSpawn;
-
+        checkPerFrame = 10;//在这里添加一行代码，每帧数检查10名敌人
         target = PlayerHealthController.instance.transform;
 
-        despawnDistance = Vector3.Distance(transform.position, maxSpawn.position) + 4f;
+        despawnDistance = 20;//这里是敌人距离玩家多远就会开始消失的数字
         enemyToCheck = 0;
         currentWave = -1;
         currentWave2 = -1;
@@ -109,7 +109,7 @@ public class EnemySpawner : MonoBehaviour
             {
                 if (spawnedEnemies[enemyToCheck] != null)
                 {
-                    if (Vector3.Distance(transform.position, spawnedEnemies[enemyToCheck].transform.position) > despawnDistance)
+                    if (Vector3.Distance(PlayerController.instance.transform.position, spawnedEnemies[enemyToCheck].transform.position) > despawnDistance)//这里也要修改
                     {//敌人离玩家距离大于despawnDistance时删除消失
                         Destroy(spawnedEnemies[enemyToCheck]);
 

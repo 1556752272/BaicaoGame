@@ -14,6 +14,8 @@ public class ExpPickup : MonoBehaviour
 
     private PlayerController player;
 
+    public float Ydistance;
+
     void Start()
     {
         player = PlayerHealthController.instance.GetComponent<PlayerController>();
@@ -23,7 +25,7 @@ public class ExpPickup : MonoBehaviour
     {
         if (movingToPlayer == true)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position-new Vector3(0,Ydistance,0), moveSpeed * Time.deltaTime);
         }
         else {
             checkCounter -= Time.deltaTime;

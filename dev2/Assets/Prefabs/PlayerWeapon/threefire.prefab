@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 2223401281601314995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2223401279832537806}
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d6e9509c7b17024ab37a7dd22f880bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 10
+  damageAmount: 20
   lifeTime: 4
   growSpeed: 5
   shouldKnockBack: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   damageOverTime: 0
   attackTime: 0
   enemiesInRange: []
-  destroyOnImpactTimes: 3
+  destroyOnImpactTimes: 0
   normalAttribute: 1
   buffedAttribute: 3
   powerattributeTimer: 0
@@ -195,4 +195,4 @@ MonoBehaviour:
   externalScale: 0
   externalLifeTime: 0
   makeEnemyFire: 1
-  firenumber: 10
+  firenumber: 2

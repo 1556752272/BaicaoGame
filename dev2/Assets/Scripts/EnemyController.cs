@@ -11,7 +11,7 @@ public class EnemyController : Enemy
 
     public float damage;
 
-    public float hitWaitTime = 1f;//Åö×²½ÇÉ«ÏÂ´ÎµÄÀäÈ´Ê±¼ä
+    public float hitWaitTime = 1f;//ç¢°æ’è§’è‰²ä¸‹æ¬¡çš„å†·å´æ—¶é—´
     private float hitCounter;
 
     
@@ -21,8 +21,8 @@ public class EnemyController : Enemy
 
     public int expToGive = 1;
 
-    public int coinValue = 1;//µôÂä½ğ±ÒÊıÁ¿
-    public float coinDropRate = .5f;//µôÂä½ğ±Ò¸ÅÂÊ
+    public int coinValue = 1;//æ‰è½é‡‘å¸æ•°é‡
+    public float coinDropRate = .5f;//æ‰è½é‡‘å¸æ¦‚ç‡
     [HideInInspector] public bool faceRight;
     public bool isSlow;
     public float slowNumber;
@@ -32,11 +32,14 @@ public class EnemyController : Enemy
     [HideInInspector] private float movespeed2;
 
 
-    private bool isIgnited = false; // ÊÇ·ñ±»µãÈ¼  
-    private Coroutine igniteCoroutine; // µãÈ¼Ğ­³Ì  
+    private bool isIgnited = false; // æ˜¯å¦è¢«ç‚¹ç‡ƒ  
+    private Coroutine igniteCoroutine; // ç‚¹ç‡ƒåç¨‹  
     private float Hurttimer ;
     private MeshRenderer meshRenderer;
     private Color mineColor;
+
+    //public float fadeTime = 0.3f;
+
     void Start()
     {
         movespeed2 = moveSpeed;
@@ -129,25 +132,25 @@ public class EnemyController : Enemy
     IEnumerator FadeOut()
     {
         isFading = true;
-        Color fadeColor = new Color(meshRenderer.material.color.r, meshRenderer.material.color.g, meshRenderer.material.color.b, 0); // Í¸Ã÷É«  
+        Color fadeColor = new Color(meshRenderer.material.color.r, meshRenderer.material.color.g, meshRenderer.material.color.b, 0); // é€æ˜è‰²  
         float elapsedTime = 0;
 
-        while (elapsedTime < 1f && isFading)
+        while (elapsedTime < 0.3f && isFading)
         {
-            // Ê¹ÓÃLerpÔÚelapsedTimeºÍfadeDurationÖ®¼ä²åÖµ  
-            meshRenderer.material.color = Color.Lerp(mineColor, fadeColor, elapsedTime / 1f);
+            // ä½¿ç”¨Lerpåœ¨elapsedTimeå’ŒfadeDurationä¹‹é—´æ’å€¼  
+            meshRenderer.material.color = Color.Lerp(mineColor, fadeColor, elapsedTime / 0.3f);
             elapsedTime += Time.deltaTime;
-            if (elapsedTime >= 1f)
+            if (elapsedTime >= 0.3f)
             {
                 Die();
                 ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
-                if (Random.value <= coinDropRate)//Ò»°ë¸ÅÂÊµôÂä½ğ±Ò
+                if (Random.value <= coinDropRate)//ä¸€åŠæ¦‚ç‡æ‰è½é‡‘å¸
                 {
                     CoinController.instance.DropCoin(transform.position, coinValue);
                 }
                 Destroy(this.gameObject);
             }
-            yield return null; // µÈ´ıÖ±µ½ÏÂÒ»Ö¡  
+            yield return null; // ç­‰å¾…ç›´åˆ°ä¸‹ä¸€å¸§  
         }
 
 
@@ -156,14 +159,14 @@ public class EnemyController : Enemy
     {
         if (collision.gameObject.tag == "Player" && hitCounter < 0f)
         {
-            knockBackCounter = 0.2f*knockBackTime;//ÕâÀïÎÒÏ£Íû¹ÖÎïÅöµ½½ÇÉ«ºó·´µ¯Ò»µã¾àÀë
+            knockBackCounter = 0.2f*knockBackTime;//è¿™é‡Œæˆ‘å¸Œæœ›æ€ªç‰©ç¢°åˆ°è§’è‰²ååå¼¹ä¸€ç‚¹è·ç¦»
             
             PlayerHealthController.instance.TakeDamage(damage);
             hitCounter = hitWaitTime;
         }
         if (collision.gameObject.tag == "Player" && hitCounter >= 0f)
         {
-            knockBackCounter = 0.1f * knockBackTime;//ÕâÀïÎÒÏ£Íû¹ÖÎïÅöµ½½ÇÉ«ºó·´µ¯Ò»µã¾àÀë
+            knockBackCounter = 0.1f * knockBackTime;//è¿™é‡Œæˆ‘å¸Œæœ›æ€ªç‰©ç¢°åˆ°è§’è‰²ååå¼¹ä¸€ç‚¹è·ç¦»
 
         }
 
@@ -178,7 +181,14 @@ public class EnemyController : Enemy
         SFXManager.instance.PlaySFXPitched(2);
         if (health <= 0)
         {
-            if (isFading == false) StartCoroutine(FadeOut());
+            if (isFading == false) 
+            {
+                Collider2D c=this.gameObject.GetComponent<Collider2D>();
+                if(c!=null)Destroy(c);
+                StartCoroutine(FadeOut());
+            }
+            
+            
         }else
         {
         }
@@ -196,7 +206,7 @@ public class EnemyController : Enemy
             ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
             if (isFading == false) StartCoroutine(FadeOut());
 
-            if (Random.value <= coinDropRate)//Ò»°ë¸ÅÂÊµôÂä½ğ±Ò
+            if (Random.value <= coinDropRate)//ä¸€åŠæ¦‚ç‡æ‰è½é‡‘å¸
             {
                 CoinController.instance.DropCoin(transform.position, coinValue);
             }
@@ -209,7 +219,7 @@ public class EnemyController : Enemy
         DamageNumberController.instance.SpawnDamage(damageToTake, transform.position,true);
 
     }
-    public override void TakeDamage(float damageToTake,bool shouldKnockback)//¼ì²âÎäÆ÷ÊÇ·ñÓĞ»÷ÍËÌØĞ§
+    public override void TakeDamage(float damageToTake,bool shouldKnockback)//æ£€æµ‹æ­¦å™¨æ˜¯å¦æœ‰å‡»é€€ç‰¹æ•ˆ
     {
 
         if (poison) {TakeDamage(damageToTake * 1.3f); }
@@ -250,7 +260,7 @@ public class EnemyController : Enemy
         }
     }
 
-    // Ã¿°ëÃëµôÑªµÄĞ­³Ì  
+    // æ¯åŠç§’æ‰è¡€çš„åç¨‹  
     private IEnumerator TakeIgniteDamage()
     {
         while (isIgnited && health > 0)
@@ -260,7 +270,7 @@ public class EnemyController : Enemy
         }
     }
 
-    // ¹ÖÎïËÀÍöÂß¼­  
+    // æ€ªç‰©æ­»äº¡é€»è¾‘  
     private void Die()
     {
         //DestroyMonster();
@@ -272,11 +282,11 @@ public class EnemyController : Enemy
             }
         
 
-        // ¼ì²â²¢ÉËº¦ÖÜÎ§µÄµĞÈË  
+        // æ£€æµ‹å¹¶ä¼¤å®³å‘¨å›´çš„æ•Œäºº  
         Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRadius);
         foreach (Collider col in colliders)
         {
-            Enemy enemy = col.GetComponent<Enemy>(); // ¼ÙÉèÄãÓĞÒ»¸öEnemy½Å±¾ÔÚµĞÈËÉíÉÏ  
+            Enemy enemy = col.GetComponent<Enemy>(); // å‡è®¾ä½ æœ‰ä¸€ä¸ªEnemyè„šæœ¬åœ¨æ•Œäººèº«ä¸Š  
             if (enemy != null)
             {
                 enemy.TakeDamage(deathDamage,2);
@@ -287,27 +297,28 @@ public class EnemyController : Enemy
     }
     public void DestroyMonster()
     {
-        // ¿ªÊ¼½¥±äĞ§¹û  
+        Destroy(gameObject);
+        // å¼€å§‹æ¸å˜æ•ˆæœ  
         StartCoroutine(FadeOutAndDestroy());
     }
 
     IEnumerator FadeOutAndDestroy()
     {
-        Color fadeOutColor = Color.black;//new Color(mineColor.r, mineColor.g, mineColor.b, 0f); // Í¸Ã÷ÑÕÉ«  
-        float fadeDuration = 1f; // ½¥±ä³ÖĞøÊ±¼ä  
+        Color fadeOutColor = Color.black;//new Color(mineColor.r, mineColor.g, mineColor.b, 0f); // é€æ˜é¢œè‰²  
+        float fadeDuration = 1f; // æ¸å˜æŒç»­æ—¶é—´  
 
-        // Ê¹ÓÃColor.Lerp½øĞĞÑÕÉ«½¥±ä  
+        // ä½¿ç”¨Color.Lerpè¿›è¡Œé¢œè‰²æ¸å˜  
         for (float t = 0f; t <= 1f; t += Time.deltaTime / fadeDuration)
         {
             Color color = Color.Lerp(mineColor, fadeOutColor, t);
             meshRenderer.material.color = color;
 
-            // µÈ´ıÏÂÒ»Ö¡  
+            // ç­‰å¾…ä¸‹ä¸€å¸§  
             yield return null;
         }
 
-        // ½¥±äÍê³ÉºóÏú»Ù¹ÖÎï  
-        Destroy(gameObject);
+        // æ¸å˜å®Œæˆåé”€æ¯æ€ªç‰©  
+        //Destroy(gameObject);
     }
 
 }  

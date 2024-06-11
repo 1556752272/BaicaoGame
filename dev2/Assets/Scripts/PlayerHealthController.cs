@@ -26,7 +26,7 @@ public class PlayerHealthController : MonoBehaviour
 
     public Slider healthSlider;
 
-    public GameObject deathEffect;//ÕâÀï½«À´·ÅËÀÍöÌØÐ§
+    public GameObject deathEffect;//ï¿½ï¿½ï¿½ï½«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
     public TMP_Text leftText;
     public TMP_Text rightText;
     void Start()
@@ -58,9 +58,9 @@ public class PlayerHealthController : MonoBehaviour
             currentHealth -= damageToTake;
             leftText.text = currentHealth.ToString();
             InvincibleCounter = InvincibleTimer;
-            //Time.timeScale = 0.3f;
-            // ¿ÉÑ¡£ºÔÚÒ»¶¨ÑÓ³Ùºó»Ö¸´Ê±¼äÁ÷ËÙ
-            //Invoke("ResetTimeScale", 0.3f); // 0.3Ãëºó»Ö¸´
+            Time.timeScale = 0.25f;
+            // ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ó³Ùºï¿½Ö¸ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            Invoke("ResetTimeScale", 0.06f); // 0.3ï¿½ï¿½ï¿½Ö¸ï¿½
             if (boy != null)
             {
                 boy.powerup();
@@ -107,10 +107,10 @@ public class PlayerHealthController : MonoBehaviour
     }
     IEnumerator PauseGameAfterTwoSeconds()
     {
-        // µÈ´ýÁ½Ãë  
+        // ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½  
         yield return new WaitForSeconds(1f);
 
-        // ÔÝÍ£ÓÎÏ·  
+        // ï¿½ï¿½Í£ï¿½ï¿½Ï·  
         Time.timeScale = 0f;
     }
     public void AddHealth(int num)

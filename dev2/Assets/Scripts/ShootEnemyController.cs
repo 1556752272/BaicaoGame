@@ -225,12 +225,12 @@ public class ShootEnemyController : Enemy
         Color fadeColor = new Color(meshRenderer.material.color.r, meshRenderer.material.color.g, meshRenderer.material.color.b, 0); // 透明色  
         float elapsedTime = 0;
 
-        while (elapsedTime < 1f && isFading)
+        while (elapsedTime < 0.3f && isFading)
         {
             // 使用Lerp在elapsedTime和fadeDuration之间插值  
-            meshRenderer.material.color = Color.Lerp(mineColor, fadeColor, elapsedTime / 1f);
+            meshRenderer.material.color = Color.Lerp(mineColor, fadeColor, elapsedTime / 0.3f);
             elapsedTime += Time.deltaTime;
-            if (elapsedTime >= 1f)
+            if (elapsedTime >= 0.3f)
             {
                 Die();
                 ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
