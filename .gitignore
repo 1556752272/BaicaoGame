@@ -1,0 +1,10 @@
+# Unity generated folders
+Library/
+Temp/
+Logs/
+Builds/
+UserSettings/
+
+# Visual Studio files
+*.pidb
+*.sln
