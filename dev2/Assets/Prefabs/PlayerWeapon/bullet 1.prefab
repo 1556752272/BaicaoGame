@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1328312699752090630}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1711582711243106440}
@@ -103,14 +103,14 @@ MonoBehaviour:
   damageOverTime: 0
   attackTime: 0
   enemiesInRange: []
-  destroyOnImpactTimes: 3
+  destroyOnImpactTimes: 1
   normalAttribute: 1
   buffedAttribute: 3
   powerattributeTimer: 0
   externalDamage: 0
   externalScale: 0
   externalLifeTime: 0
-  poison: 1
+  poison: 0
   lowbloodKill: 0
   nowstone: 0
   makeEnemyStone: 0

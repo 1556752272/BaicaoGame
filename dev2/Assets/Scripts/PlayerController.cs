@@ -97,14 +97,16 @@ public class PlayerController : MonoBehaviour
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
         moveInput.Normalize();
-        if (speedattributeTimer > 0)
-        {//移动增幅
-            speedattributeTimer -= Time.fixedDeltaTime;
-            transform.position += moveInput * moveSpeed * Time.fixedDeltaTime * buffedAttribute;
-        }
-        else
-        {
-            transform.position += moveInput * moveSpeed * Time.fixedDeltaTime;
+        if(PlayerHealthController.instance.currentHealth > 0) { 
+            if (speedattributeTimer > 0)
+            {//移动增幅
+                speedattributeTimer -= Time.fixedDeltaTime;
+                transform.position += moveInput * moveSpeed * Time.fixedDeltaTime * buffedAttribute;
+            }
+            else
+            {
+                transform.position += moveInput * moveSpeed * Time.fixedDeltaTime;
+            }
         }
     }
     public void magnetfunc()

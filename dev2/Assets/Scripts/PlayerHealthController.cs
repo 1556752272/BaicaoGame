@@ -58,9 +58,9 @@ public class PlayerHealthController : MonoBehaviour
             currentHealth -= damageToTake;
             leftText.text = currentHealth.ToString();
             InvincibleCounter = InvincibleTimer;
-            Time.timeScale = 0.25f;
-            // ��ѡ����һ���ӳٺ�ָ�ʱ������
-            Invoke("ResetTimeScale", 0.06f); // 0.3���ָ�
+            // 可选：在一定延迟后恢复时间流速
+            //Time.timeScale = 0.25f;
+            //Invoke("ResetTimeScale", 0.06f); // 0.3秒后恢复
             if (boy != null)
             {
                 boy.powerup();

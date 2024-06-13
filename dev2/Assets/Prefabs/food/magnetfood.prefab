@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938871265
-  m_SortingLayer: -4
+  m_SortingLayer: -6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a45746ee314446b4eadd63e8973d39af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -155,7 +155,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938871265
-  m_SortingLayer: -4
+  m_SortingLayer: -6
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 039c4d0053fb90345a2b0a1b53de6729, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -299,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 2264163222013191385}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -43.346424, y: -16.53214, z: -5.604632}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7035305437986945000}
@@ -347,7 +347,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1938871265
-  m_SortingLayer: -4
+  m_SortingLayer: -6
   m_SortingOrder: 0
   m_Sprite: {fileID: -196789849, guid: 99f10abcf979e904b883da0c6922d74f, type: 3}
   m_Color: {r: 0.0662117, g: 0, b: 1, a: 1}
@@ -411,7 +411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8307310582826950382
 RectTransform:
   m_ObjectHideFlags: 0
@@ -505,8 +505,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000000055879, y: -0.12}
-  m_SizeDelta: {x: 3.8384, y: 1.6482}
+  m_AnchoredPosition: {x: 0.334, y: 0.246}
+  m_SizeDelta: {x: 2.626, y: 0.492}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &562314254525202181
 CanvasRenderer:
@@ -536,10 +536,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '? ? ?'
+  m_text: "\u8303\u56F4\u589E\u52A0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 75d6d2f797880014ebba218518753ac6, type: 2}
-  m_sharedMaterial: {fileID: -7625676233412820669, guid: 75d6d2f797880014ebba218518753ac6, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 798d3d57998fa79409e13b3ee0133b5f, type: 2}
+  m_sharedMaterial: {fileID: 2290735094468546271, guid: 798d3d57998fa79409e13b3ee0133b5f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

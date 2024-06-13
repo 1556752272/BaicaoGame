@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Spine.Unity;
+using Spine;
 
 public class CharacterAnimation : MonoBehaviour
 {
@@ -89,7 +90,8 @@ public class CharacterAnimation : MonoBehaviour
                 this.transform.localScale = new Vector3(-0.72f, 0.72f, 0);
                 spineAnimation.AnimationName = "walk";
             }
-            if (moveX == 0 && moveY == 0)
+            if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
+            //if (moveX == 0 && moveY == 0)
             {
                 //spineAnimation.AnimationName = "died";
                 spineAnimation.AnimationName = "idle";
