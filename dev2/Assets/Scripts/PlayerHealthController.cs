@@ -26,7 +26,7 @@ public class PlayerHealthController : MonoBehaviour
 
     public Slider healthSlider;
 
-    public GameObject deathEffect;//���ｫ����������Ч
+    public GameObject deathEffect;//这里将来放死亡特效
     public TMP_Text leftText;
     public TMP_Text rightText;
     void Start()
@@ -107,10 +107,10 @@ public class PlayerHealthController : MonoBehaviour
     }
     IEnumerator PauseGameAfterTwoSeconds()
     {
-        // �ȴ�����  
+        // 等待两秒
         yield return new WaitForSeconds(1f);
 
-        // ��ͣ��Ϸ  
+        // 暂停游戏
         Time.timeScale = 0f;
     }
     public void AddHealth(int num)
