@@ -146,7 +146,7 @@ public class EnemyController : Enemy
                 ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
                 if (Random.value <= coinDropRate)//一半概率掉落金币
                 {
-                    CoinController.instance.DropCoin(transform.position, coinValue);
+                    //CoinController.instance.DropCoin(transform.position, coinValue);
                 }
                 Destroy(this.gameObject);
             }

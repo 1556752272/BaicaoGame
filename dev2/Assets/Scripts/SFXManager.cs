@@ -17,12 +17,20 @@ public class SFXManager : MonoBehaviour
     {
         soundEffects[sfxToPlay].Stop();
         soundEffects[sfxToPlay].Play();
+        //soundEffects[sfxToPlay].PlayOneShot();
     }
 
+    public AudioClip collectGem;
     public void PlaySFXPitched(int sfxToPlay)
     {
-        soundEffects[sfxToPlay].pitch = Random.Range(.5f, 1f);
-
-        PlaySFX(sfxToPlay);
+        if(sfxToPlay == 9)
+        {
+            soundEffects[sfxToPlay].PlayOneShot(collectGem);
+        }
+        else
+        {
+            soundEffects[sfxToPlay].pitch = Random.Range(.5f, 1f);
+            PlaySFX(sfxToPlay);
+        }
     }
 }
