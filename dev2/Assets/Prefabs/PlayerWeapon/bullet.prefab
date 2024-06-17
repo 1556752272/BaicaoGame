@@ -98,7 +98,7 @@ MonoBehaviour:
   lifeTime: 5
   growSpeed: 5
   shouldKnockBack: 0
-  sloweffect: 0
+  sloweffect: 0.9
   destroyParent: 0
   damageOverTime: 0
   attackTime: 0
@@ -114,6 +114,7 @@ MonoBehaviour:
   lowbloodKill: 0
   nowstone: 0
   makeEnemyStone: 0
+  audioClip: {fileID: 0}
 --- !u!1 &5744344285001558098
 GameObject:
   m_ObjectHideFlags: 0

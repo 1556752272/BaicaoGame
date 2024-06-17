@@ -125,6 +125,7 @@ public class KnifeDamager : EnemyDamagers
                 {
                     Enemy em = collision.GetComponent<Enemy>();
                     em.TakeDamage(FoodController.instance.powerbuff * damageAmount, shouldKnockBack);
+                    SFXManager.instance.PlaySFXPitched(2);
                 }
 
                 destroyOnImpactTimes--;

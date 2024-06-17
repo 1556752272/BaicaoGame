@@ -193,7 +193,7 @@ public class ShootEnemyController : Enemy
         //StartCoroutine(ChangeColorToWhite(0.3f));
         meshRenderer.material.color = Color.gray;
         Hurttimer = 1f;
-        SFXManager.instance.PlaySFXPitched(2);
+        //SFXManager.instance.PlaySFXPitched(2);
         health -= damageToTake;
         if(health <= 0)
         {

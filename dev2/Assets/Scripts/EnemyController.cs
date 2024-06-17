@@ -38,6 +38,7 @@ public class EnemyController : Enemy
     private MeshRenderer meshRenderer;
     private Color mineColor;
 
+
     //public float fadeTime = 0.3f;
 
     void Start()
@@ -178,14 +179,12 @@ public class EnemyController : Enemy
 
         Hurttimer = 0.3f;
         health -= damageToTake;
-        SFXManager.instance.PlaySFXPitched(2);
+        //SFXManager.instance.PlaySFXPitched(2);
         if (health <= 0)
         {
-            if (isFading == false) 
+            if (isAlive == true) 
             {
-                Collider2D c=this.gameObject.GetComponent<Collider2D>();
-                if(c!=null)Destroy(c);
-                StartCoroutine(FadeOut());
+                Dying();//触发死亡过程
             }
             
             
@@ -196,6 +195,16 @@ public class EnemyController : Enemy
         DamageNumberController.instance.SpawnDamage(damageToTake, transform.position);
 
     }
+    bool isAlive = true;
+    public override void Dying()
+    {
+        isAlive = false;//修改死亡标识
+        GetComponent<Collider2D>().enabled = false;//禁用碰撞体
+        StartCoroutine(FadeOut());
+
+    }
+
+
     public override void TakeDamage(float damageToTake,int fire)
     {
         health -= damageToTake;
@@ -204,11 +213,11 @@ public class EnemyController : Enemy
             //Destroy(gameObject);   
 
             ExperienceLevelController.instance.SpawnExp(transform.position, expToGive);
-            if (isFading == false) StartCoroutine(FadeOut());
+            if (isAlive == true) Dying();//如果活着
 
             if (Random.value <= coinDropRate)//一半概率掉落金币
             {
-                CoinController.instance.DropCoin(transform.position, coinValue);
+                //CoinController.instance.DropCoin(transform.position, coinValue);
             }
 
         }
