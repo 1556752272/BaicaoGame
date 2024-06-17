@@ -23,6 +23,7 @@ public class Enemy : MonoBehaviour
         
     }
     virtual public  void TakeDamage(float damageToTake) { }
+    virtual public void Dying() { }
     virtual public void TakeDamage(float damageToTake, bool shouldKnockback)
     {
 

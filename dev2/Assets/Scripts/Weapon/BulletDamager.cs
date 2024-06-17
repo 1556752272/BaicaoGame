@@ -35,10 +35,13 @@ public class BulletDamager : EnemyDamagers
 
     public bool nowstone;
     public bool makeEnemyStone = false;
+    public AudioClip audioClip;
     void Start()
-    {//出现由小变大特效
+    {
+
+        //出现由小变大特效
         targetSize = transform.localScale;
-        transform.localScale = Vector3.zero;
+        //transform.localScale = Vector3.zero;
         attackTime = 0.5f;//这里先给一个默认的伤害间隔
         if (externalDamage != 0f)
         {
@@ -46,7 +49,7 @@ public class BulletDamager : EnemyDamagers
         }
         if (externalScale != 0f)
         {
-            transform.localScale = Vector3.one * externalScale;
+            //transform.localScale = Vector3.one * externalScale;
         }
         if (externalLifeTime != 0f)
         {
@@ -56,13 +59,13 @@ public class BulletDamager : EnemyDamagers
 
     void Update()
     {
-        transform.localScale = Vector3.MoveTowards(transform.localScale, targetSize, growSpeed * Time.deltaTime);
+        //transform.localScale = Vector3.MoveTowards(transform.localScale, targetSize, growSpeed * Time.deltaTime);
 
         lifeTime -= Time.deltaTime;//武器存在时间
 
         if (lifeTime <= 0)
         {
-            targetSize = Vector3.zero;//感觉这里是废话
+            //targetSize = Vector3.zero;
             Destroy(gameObject);
             if (transform.localScale.x == 0f)
             {
@@ -138,7 +141,7 @@ public class BulletDamager : EnemyDamagers
                     em.TakeDamage(FoodController.instance.powerbuff * damageAmount, shouldKnockBack);
                     if (lowbloodKill && (em.health / em.maxhealth < 0.2f))
                     {
-                        Destroy(em);
+                        em.Dying();
                     }
                 }
 

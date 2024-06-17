@@ -108,7 +108,7 @@ public class PlayerBullet : Weapon
         damager.damageAmount = stats[weaponLevel].damage;
         damager.lifeTime = stats[weaponLevel].duration;
 
-        damager.transform.localScale = Vector3.one * stats[weaponLevel].range;
+        //damager.transform.localScale = Vector3.one * stats[weaponLevel].range;
         timeBetweenSpawn = stats[weaponLevel].timeBetweenAttacks;
         weaponnumber = stats[weaponLevel].amount;
         damager.destroyOnImpactTimes = (int)stats[weaponLevel].acrossEnemyNums;
@@ -117,6 +117,9 @@ public class PlayerBullet : Weapon
     }
     public void AttackEnemy()
     {
+        //≤•∑≈“Ù∆µ
+        GetComponent<AudioSource>().PlayOneShot(Resources.Load<AudioClip>("Audio/bullet_fire"));
+
         Vector3 enemyTran = PlayerController.instance.GetClosestEnemy();
         if (enemyTran == Vector3.zero) return;
         // GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position , Quaternion.identity);
@@ -134,6 +137,9 @@ public class PlayerBullet : Weapon
     }
     public void AttackEnemy3nums()
     {
+        //≤•∑≈“Ù∆µ
+        GetComponent<AudioSource>().PlayOneShot(Resources.Load<AudioClip>("Audio/bullet_fire"));
+
         Vector3 enemyTran = PlayerController.instance.GetClosestEnemy();
         if (enemyTran == Vector3.zero) return;
         // GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position , Quaternion.identity);
