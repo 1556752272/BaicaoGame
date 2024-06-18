@@ -52,6 +52,10 @@ public class PlayerHealthController : MonoBehaviour
 
     public void TakeDamage(float damageToTake)
     {
+        //如果是无敌状态，不受伤害
+        if(TestParameter.instance.isIndestructible == true) { return; }
+
+
         if (InvincibleCounter < 0)
         {
             SFXManager.instance.PlaySFXPitched(0);
