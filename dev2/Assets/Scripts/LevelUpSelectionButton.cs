@@ -32,7 +32,6 @@ public class LevelUpSelectionButton : MonoBehaviour
         }
         assignWeapon = theWeapon;
     }
-    
     public void SelectUpgrade()
     {
         if(assignWeapon != null)
@@ -48,7 +47,16 @@ public class LevelUpSelectionButton : MonoBehaviour
             
 
             UIController.instance.levelUpPanel.SetActive(false);
-            Time.timeScale = 1f;
+
+            //如果测试组件被启用，则调用测试速度
+            if (TestParameter.instance)
+            {
+                Time.timeScale = 1 + TestParameter.instance.timeScale;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
         }
     }
 
