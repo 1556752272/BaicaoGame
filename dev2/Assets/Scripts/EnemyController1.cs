@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class EnemyController : Enemy
+public class EnemyController1 : Enemy
 {
     public Rigidbody2D theRB;
     public float moveSpeed;
@@ -54,6 +54,7 @@ public class EnemyController : Enemy
 
     void Update()
     {
+        Debug.Log(transform.localScale.x);
         //受伤时，颜色变暗
         if (Hurttimer >= 0)
         {
@@ -63,23 +64,23 @@ public class EnemyController : Enemy
                 meshRenderer.material.color = mineColor;
             }
         }
-        //转身范围
-        float turnRange = 0.1f;
-        //如果在右边
-        if ((transform.position.x - PlayerController.instance.transform.position.x > turnRange) && transform.localScale.x < 0 )
+        if ((PlayerController.instance.transform.position.x < transform.position.x) && faceRight)
+        {
+            Vector3 newScale = transform.localScale;
+            Debug.Log(newScale.x);
+            newScale.x = -newScale.x;
+            transform.localScale = newScale;
+
+            faceRight = false;
+        }
+        if ((PlayerController.instance.transform.position.x > transform.position.x) && !faceRight)
         {
             Vector3 newScale = transform.localScale;
             newScale.x = -newScale.x;
             transform.localScale = newScale;
+
+            faceRight = true;
         }
-        //如果在左边
-        if ((PlayerController.instance.transform.position.x - transform.position.x > turnRange) && transform.localScale.x > 0)
-        {
-            Vector3 newScale = transform.localScale;
-            newScale.x = -newScale.x;
-            transform.localScale = newScale;
-        }
-        //石化时间
         if (stonedTimer > 0)
         {
             stonedTimer -= Time.deltaTime;
@@ -89,51 +90,47 @@ public class EnemyController : Enemy
                 stoned = false;
             }
         }
-
-        //移动方案
+        
+        
         if (PlayerController.instance.gameObject.activeSelf == true)
         {
-            if (knockBackCounter > 0)
+            if(knockBackCounter > 0)
             {
                 knockBackCounter -= Time.deltaTime;
 
-                if (moveSpeed > 0)
+                if(moveSpeed > 0)
                 {
                     moveSpeed = -moveSpeed * 4f;
                 }
 
-                if (knockBackCounter <= 0)
+                if(knockBackCounter <= 0)
                 {
                     moveSpeed = Mathf.Abs(moveSpeed * .25f);
                 }
             }
-            //石化
-            if (stoned)
-            {
-                theRB.velocity = Vector3.zero;
-            }
-            else
-            {
-                //向目标移动
-                theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
+                if (stoned)
+                {
+                    theRB.velocity = Vector3.zero;
+                }
+                else
+                {
 
+                    theRB.velocity = (target.position - transform.position).normalized * moveSpeed;
+                
             }
-            //减速
-            if (isSlow)
-            {
-                theRB.velocity *= slowNumber;
+            if (isSlow) {theRB.velocity *= slowNumber;
+                
             }
-
+            
             if (hitCounter >= 0f)
             {
                 hitCounter -= Time.deltaTime;
             }
-        }
-        else//否则停止移动
+        }else
         {
             theRB.velocity = Vector2.zero;
         }
-
+        
     }
     bool isFading = false;
     IEnumerator FadeOut()
