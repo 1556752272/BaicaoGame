@@ -126,6 +126,7 @@
     <Compile Include="Assets\Scripts\Weapon\ThrowWeapon.cs" />
     <Compile Include="Assets\Scripts\Weapon\BoyAnimation.cs" />
     <Compile Include="Assets\Scripts\CoinPickup.cs" />
+    <Compile Include="Assets\Scripts\TestParameter.cs" />
     <Compile Include="Assets\Scripts\PlayerHealthController.cs" />
     <Compile Include="Assets\Scripts\ExpPickup.cs" />
     <Compile Include="Assets\Scripts\Weapon\KnifeWeapon.cs" />
@@ -145,7 +146,7 @@
     <Compile Include="Assets\lj\dialogSystem.cs" />
     <Compile Include="Assets\Scripts\DamageNumber.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\TestParameter.cs" />
+    <Compile Include="Assets\Scripts\EnemyController1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

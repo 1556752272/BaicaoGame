@@ -62,6 +62,7 @@ public class ExperienceLevelController : MonoBehaviour
 
     void LevelUp()
     {
+        //等级提升特效
         levelUpText.gameObject.SetActive(true);
         
         currentExperience -= expLevels[currentLevel];
@@ -72,8 +73,14 @@ public class ExperienceLevelController : MonoBehaviour
         {
             currentLevel = expLevels.Count - 1;
         }
-        
+
         //PlayerController.instance.activeWeapon.LevelUp();
+
+        if (PlayerController.instance.assignWeapons.Count <=0)//如果没有武器升级，则结束
+        {
+            return;
+        }
+
 
         UIController.instance.levelUpPanel.SetActive(true);
 
@@ -89,14 +96,14 @@ public class ExperienceLevelController : MonoBehaviour
 
         List<Weapon> availableWeapons = new List<Weapon>();
 
-        availableWeapons.AddRange(PlayerController.instance.assignWeapons);
+        availableWeapons.AddRange(PlayerController.instance.assignWeapons);//将可用武器添加到列表中
         for(int i = 0; i < 3; i++) { 
-        if(availableWeapons.Count > 0)//从已经拥有的武器中随机3把武器提供升级
-        {
-            int selected = Random.Range(0, availableWeapons.Count);
-            weaponsToUpgrade.Add(availableWeapons[selected]);
-            availableWeapons.RemoveAt(selected);
-        }
+            if(availableWeapons.Count > 0)//从已经拥有的武器中随机3把武器提供升级
+            {
+                int selected = Random.Range(0, availableWeapons.Count);
+                weaponsToUpgrade.Add(availableWeapons[selected]);
+                availableWeapons.RemoveAt(selected);
+            }
         }
         //***********
         //if (PlayerController.instance.assignWeapons.Count + PlayerController.instance.fullyLevelledWeapons.Count < PlayerController.instance.maxWeapons)
