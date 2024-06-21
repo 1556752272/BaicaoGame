@@ -17205,7 +17205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isIndestructible: 0
   slider: {fileID: 2026607505}
-  timeScale: 0
+  timeScale: 1
 --- !u!4 &1073966288
 Transform:
   m_ObjectHideFlags: 0

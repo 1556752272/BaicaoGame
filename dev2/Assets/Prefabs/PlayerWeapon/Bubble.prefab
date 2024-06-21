@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 5328170034927697466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4432427559816807843}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dad: {fileID: 0}
-  damageAmount: 10
+  damageAmount: 8
   lifeTime: 6
   growSpeed: 5
   shouldKnockBack: 0
@@ -56,7 +56,7 @@ MonoBehaviour:
   damageOverTime: 0
   attackTime: 0
   enemiesInRange: []
-  destroyOnImpactTimes: 3
+  destroyOnImpactTimes: 1
   normalAttribute: 1
   buffedAttribute: 3
   powerattributeTimer: 0
