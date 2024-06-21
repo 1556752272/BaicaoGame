@@ -51,7 +51,7 @@ public class LevelUpSelectionButton : MonoBehaviour
             //如果测试组件被启用，则调用测试速度
             if (TestParameter.instance)
             {
-                Time.timeScale = 1 + TestParameter.instance.timeScale;
+                Time.timeScale = TestParameter.instance.timeScale;
             }
             else
             {

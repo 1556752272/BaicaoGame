@@ -38,7 +38,7 @@ public class TestParameter : MonoBehaviour
     }
     //调整游戏速度
     public Slider slider;
-    public float timeScale;
+    public float timeScale = 1;
     public void AdjustTimeScale()
     {
         timeScale = 1 + slider.value * 10;

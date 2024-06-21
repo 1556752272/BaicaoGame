@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Weapon\BoyWeapon.cs" />
     <Compile Include="Assets\Scripts\SFXManager.cs" />
     <Compile Include="Assets\Scripts\Weapon\FireDamager.cs" />
+    <Compile Include="Assets\Scripts\EnemyController1.cs" />
     <Compile Include="Assets\Scripts\Weapon\StoneDamager.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Weapon\Weapon.cs" />
@@ -146,7 +147,6 @@
     <Compile Include="Assets\lj\dialogSystem.cs" />
     <Compile Include="Assets\Scripts\DamageNumber.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\EnemyController1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
