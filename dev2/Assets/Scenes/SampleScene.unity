@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -179,7 +178,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -175109689
-  m_SortingLayer: -9
+  m_SortingLayer: -10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 36b3dca9a7c241b4087169219b5eb7c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -632,6 +631,8 @@ MonoBehaviour:
   dialogRows: []
   spritewhite: {fileID: 0}
   num: 0
+  spriteLeft2: {fileID: 0}
+  spriteRight2: {fileID: 0}
 --- !u!1 &856696718
 GameObject:
   m_ObjectHideFlags: 0

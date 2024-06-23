@@ -106,16 +106,15 @@ public class CharacterAnimation : MonoBehaviour
             }
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            meshRenderer.material.color = Color.red;
-            Hurttimer = 0.3f;
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Enemy")
+    //    {
+    //        meshRenderer.material.color = Color.red;
+    //        Hurttimer = 0.3f;
            
-        }
-
-    }
+    //    }
+    //}
     public void Die()
     {
         spineAnimation.AnimationName = "died";
