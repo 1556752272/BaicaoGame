@@ -130,7 +130,8 @@ public class KnifeDamager : EnemyDamagers
                 //DamageNumberController.instance.SpawnDamage(FoodController.instance.powerbuff * damageAmount, collision.gameObject.transform.position + new Vector3(0,1,0));
                 SFXManager.instance.PlaySFXPitched(2);//“Ù–ß
 
-                BuffManager.AddNewBuff(null, collision.gameObject, "BuffMoveSpeedSlow", 10);
+                BuffManager.AddNewBuff(null, collision.gameObject, "BuffMoveSpeedSlow", 3);
+                BuffManager.AddNewBuff(null, collision.gameObject, "BuffBrun", 3);
 
 
 

@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\DamageNumberController.cs" />
     <Compile Include="Assets\Scripts\Weapon\Bubble.cs" />
     <Compile Include="Assets\Scripts\EnemySpawn2.cs" />
+    <Compile Include="Assets\Scripts\Manager\BuffManager.cs" />
     <Compile Include="Assets\_Udemy Vampire Survival Assets\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Scripts\Weapon\BoyWeapon.cs" />
     <Compile Include="Assets\Scripts\SFXManager.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Assets\_Udemy Vampire Survival Assets\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\_Udemy Vampire Survival Assets\Art\Art\包\DialogManager.cs" />
     <Compile Include="Assets\Scripts\Weapon\SpinWeapon.cs" />
+    <Compile Include="Assets\Scripts\Buff\BuffMoveSpeedSlow.cs" />
     <Compile Include="Assets\Scripts\RockDialog.cs" />
     <Compile Include="Assets\Scripts\Weapon\EnemyBullet.cs" />
     <Compile Include="Assets\Scripts\Weapon\Skill2.cs" />
@@ -99,8 +101,10 @@
     <Compile Include="Assets\Scripts\EnemyAi\EnemyAi.cs" />
     <Compile Include="Assets\Scripts\Manager\DamageManager.cs" />
     <Compile Include="Assets\Scripts\BossController.cs" />
+    <Compile Include="Assets\Scripts\Manager\GlobalManager.cs" />
     <Compile Include="Assets\Scripts\Weapon\ZoneWeapon.cs" />
     <Compile Include="Assets\_Udemy Vampire Survival Assets\DOTween\Modules\DOTweenModulePhysics.cs" />
+    <Compile Include="Assets\Scripts\Buff\BuffBrun.cs" />
     <Compile Include="Assets\Scripts\PlayerStatController.cs" />
     <Compile Include="Assets\Scripts\ShootEnemyController.cs" />
     <Compile Include="Assets\Scripts\Weapon\Ch1kill.cs" />
@@ -152,10 +156,6 @@
     <Compile Include="Assets\lj\dialogSystem.cs" />
     <Compile Include="Assets\Scripts\DamageNumber.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Buff\BuffMoveSpeedSlow.cs" />
-    <Compile Include="Assets\Scripts\Manager\BuffManager.cs" />
-    <Compile Include="Assets\Scripts\Manager\GlobalManager.cs" />
-    <Compile Include="Assets\Scripts\Buff\BuffBrun.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -13,8 +13,8 @@ public class EnemyAi : MonoBehaviour
 
     void Start()
     {
-        //MoveToNPC(PlayerController.instance.gameObject);//向着玩家移动
-        MoveToPosition(new Vector3(10,0,0));
+        MoveToNPC(PlayerController.instance.gameObject);//向着玩家移动
+        //MoveToPosition(new Vector3(10,0,0));
     }
 
     void Update()

@@ -8,7 +8,6 @@ public class BuffMoveSpeedSlow : Buff
 {
     public override void RefreshStatus()
     {
-        Debug.Log("Ë¢ÐÂ×´Ì¬");
         GetComponent<Unit>().GetMoveSpeed();
     }
 

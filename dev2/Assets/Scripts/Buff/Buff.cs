@@ -9,16 +9,16 @@ public class Buff : MonoBehaviour
     public float duration;//持续时间
     public float elapsedTime;//已用时间
     static public bool isMultiple;//是否多次添加
+    public GameObject caster;//施法者
+
 
     //刷新状态
-    public virtual void RefreshStatus()
-    {
-    }
+    public virtual void RefreshStatus() { }
+    //当buff开始
+    public virtual void OnBuffStart() { }
 
-    void Update()
-    {
-        
-    }
+
+
 
     //固定hp加成
     //GetComponent<Unit>().getMaxHp();
@@ -54,6 +54,7 @@ public class Buff : MonoBehaviour
     {
         RefreshStatus();
         StartCoroutine(TimeToDestroy());//计时销毁
+        OnBuffStart();
     }
     void OnDestroy()
     {
