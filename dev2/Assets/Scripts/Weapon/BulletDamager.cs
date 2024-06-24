@@ -104,6 +104,7 @@ public class BulletDamager : EnemyDamagers
         }
     }
 
+    //当碰撞到怪物
     private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject collidingObject = collision.gameObject;
@@ -114,39 +115,27 @@ public class BulletDamager : EnemyDamagers
 
         if (damageOverTime == false)
         {
-            if (collision.tag == "Enemy")
+            if (collision.tag == "Enemy" && destroyOnImpactTimes > 0)
             {
-                EnemyController ene = collision.gameObject.GetComponent<EnemyController>();
-                if (poison && ene != null)
+                Unit em = collision.gameObject.GetComponent<Unit>();
+                //em.TakeDamage(FoodController.instance.powerbuff * damageAmount, shouldKnockBack);
+
+                //造成伤害，走伤害过滤器
+                DamageManager.ApplyDamage(new Dictionary<string, dynamic>() {
+                    { "victim", collision.gameObject },
+                    { "damage", FoodController.instance.powerbuff * damageAmount },
+                });
+                //伤害数字特效
+                DamageNumberController.instance.SpawnDamage(FoodController.instance.powerbuff * damageAmount, collision.gameObject.transform.position + new Vector3(0, 1, 0));
+
+
+                if (lowbloodKill && (em.hp / em.maxHp < 0.2f))
                 {
-                    ene.poison = true;
-                    ene.isSlow = true;
-                    ene.slowNumber = sloweffect;
-                }
-                ShootEnemyController ene2 = collision.gameObject.GetComponent<ShootEnemyController>();
-                if (poison && ene2 != null)
-                {
-                    ene2.poison = true;
-                    ene2.isSlow = true;
-                    ene2.slowNumber = sloweffect;
-                }
-                BossController ene3 = collision.gameObject.GetComponent<BossController>();
-                if (poison && ene3 != null)
-                {
-                    ene3.poison = true;
-                }
-                if (collision.GetComponent<Enemy>() != null)
-                {
-                    Enemy em = collision.GetComponent<Enemy>();
-                    em.TakeDamage(FoodController.instance.powerbuff * damageAmount, shouldKnockBack);
-                    if (lowbloodKill && (em.health / em.maxhealth < 0.2f))
-                    {
-                        em.Dying();
-                    }
+                    em.Dying();
                 }
 
                 destroyOnImpactTimes--;
-                if (destroyOnImpactTimes == 0)
+                if (destroyOnImpactTimes <= 0)
                 {
                     Destroy(gameObject);
                 }

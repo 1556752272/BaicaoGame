@@ -120,13 +120,31 @@ public class KnifeDamager : EnemyDamagers
         {
             if (collision.tag == "Enemy")
             {
-                
-                if (collision.GetComponent<Enemy>() != null)
-                {
-                    Enemy em = collision.GetComponent<Enemy>();
-                    em.TakeDamage(FoodController.instance.powerbuff * damageAmount, shouldKnockBack);
-                    SFXManager.instance.PlaySFXPitched(2);
-                }
+                //造成伤害，走伤害过滤器
+                //DamageManager.ApplyDamage(new Dictionary<string, dynamic>() {
+                //    { "attacker", GlobalManager.instance.player},
+                //    { "victim", collision.gameObject },
+                //    { "damage", FoodController.instance.powerbuff * damageAmount },
+                //});
+
+                //DamageNumberController.instance.SpawnDamage(FoodController.instance.powerbuff * damageAmount, collision.gameObject.transform.position + new Vector3(0,1,0));
+                SFXManager.instance.PlaySFXPitched(2);//音效
+
+                BuffManager.AddNewBuff(null, collision.gameObject, "BuffMoveSpeedSlow", 3);
+                BuffManager.AddNewBuff(null, collision.gameObject, "BuffBrun", 3);
+
+
+
+
+
+                //if (collision.GetComponent<Enemy>() != null)
+                //{
+
+                //    Enemy em = collision.GetComponent<Enemy>();
+                //    em.TakeDamage(FoodController.instance.powerbuff * damageAmount, shouldKnockBack);
+
+                //    SFXManager.instance.PlaySFXPitched(2);
+                //}
 
                 destroyOnImpactTimes--;
                 if (destroyOnImpactTimes == 0)
